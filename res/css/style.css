@@ -23,3 +23,7 @@
 .submenu1 {padding: 10px; text-align: center; font-size: 14px; font-weight: 400}
 
 .shorcuts {display: flex; align-items: center;}
+
+.lang {padding: 0 0 0 20px;}
+
+.OnlineMall {display: inline-block; padding: 0 20px; margin text-decoration: none; position: relative; color: #333; border: 2px solid transparent; border-radius: 20%; border: 1px solid black;}
