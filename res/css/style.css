@@ -1,28 +1,48 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
-/* header */
-#header {position: fixed; background-color: rgba(0, 0, 0, 0); width: 100%; top: 0; left: 0; right: 0; z-index: 100;}
-#header .wrap-header {display: flex; justify-content: center; align-items: center; transition: all 0.3s ease-out;}
-#header .wrap-header .logo {position: absolute; left: 40px; top: 36px;}
-#header .wrap-header .logo > a {display: block; width: 215px; height: 28px; text-indent: -9999px; 
-    background:url(https://www.shinsegae-lnb.com/images/common/logo_wh.png) no-repeat center / contain;}
+/* header*/
+#header {position: fixed; top: 0; left: 0; right: 0; z-index: 100;}
+#header .wrap__header {display: flex; justify-content: center; align-items: center; transition: all 0.3s ease-out; border: 1px solid red;}
+
+/*header속 로고 */
+#header .wrap__header .logo {position: absolute; left: 40px; top: 36px;}
+#header .wrap__header .logo a {display: block; width: 215px; height: 28px; text-indent: -9999px; 
+    background:url('../img/logo_wh.png') no-repeat center / contain;}
+
+/*header속 menu*/
 #header .menu {display: flex; margin: 0; padding: 0; text-align: center;}
-#header .menu .main-menu {display: flex; flex-direction: row;}
-#header .menu .main-menu > li {width: 160px;}
-#header .menu .main-menu1 > a {display:block; position:relative; color:white; line-height: 100px; font-size: 18px; width: 100%;}
+#header .menu .main__menu {display: flex; flex-direction: row;}
+#header .menu .main__menu > li {width: 160px;}
+#header .menu .main__menu1 > a {display:block; position:relative; color:white; line-height: 100px; font-size: 18px; width: 100%;}
+
+/*header속 submenu*/
 #header .submenu {display: none;}
 #header .submenu ul {position: absolute; padding: 20px 20px 60px; width:160px;}
 #header .submenu li {display: flex; justify-content: center; align-items: center; text-align: center;}
-#header:hover .submenu {display: block;}
-#header .submenu .submenu-name a {width:100%; font-size: 14px; font-weight: 400; overflow: hidden; padding: 10px 0; color: black; text-align: center;}
-#header .Shortcuts {position: absolute; display: flex; justify-content: flex-end; align-items: center; right: 40px; top: 36px;}
-#header .lang {padding: 0 0 0 20px; color: #fff;}
-#header .OnlineMall {display: inline-block; padding: 0 20px; margin: 0 0 0 30px; text-decoration: none; position: relative; color: #fff; 
-    border-radius: 50px/50px; border: 1px solid #fff; overflow: hidden; line-height: 40px; vertical-align: middle;}
-#header .Shortcuts .search img, .Shortcuts .lang img {width: 22px; height: 22px;}
+#header .submenu .submenu__name .submenu1 a {width:100%; font-size: 14px; font-weight: 400; padding: 10px 0; color: black; text-align: center;}
+
+/*header속 메뉴및 바로가기*/
+#header .shortcuts {display: flex; justify-content: flex-end; align-items: center; position: absolute; right: 40px; top: 36px;}
+#header .shortcuts .search {width: 22px; height: 22px; text-indent: -9999px;
+    background: url('../img/ico_searchOpen.png') no-repeat center / contain;}
+#header .shortcuts .lang {padding-left: 32px; line-height: 32px; margin-left: 30px; font-size: 14px; color: #fff;
+    background: url('../img/ico_langOpen.png') no-repeat left center;}
+#header .shortcuts .order {display: flex; justify-content: center; align-items: center; color: #fff; height: 35px; padding: 0 20px; margin-left: 20px; border: 1px solid white; border-radius: 20px;}
+#header .shortcuts .order i {display: block; width: 11px; height: 11px; margin-left: 10px;
+    background: url('../img/ico_order.png') no-repeat center;}
+#header .shortcuts .menu {display: none; background: url('../img/ico_menuOpen.png') no-repeat center;}
+
+/* menu에 마우스 오버시 header 전체가 드롭다운되는 방법*/
+#header .menu:hover .submenu {display: block; background: #fff;}
+#header.open {background: #fff;}
+#header.open .wrap__header .logo a {background: url('../img/logo.png') no-repeat center / contain;}
+#header.open .wrap__header .menu .title__link {color: #000000; font-weight: 700;}
+#header.open .shortcuts .search {background: url('../img/ico_searchOpen_bk.png') no-repeat center / contain;}
+#header.open .shortcuts .order {color: #000000; border: 1px solid black;}
+#header.open .shortcuts .order i {background: url('../img/ico_order_bk.png') no-repeat center / contain;}
+#header.open .shortcuts .lang {background: url('../img/ico_langOpen_bk.png') no-repeat left; color: black; font-weight: 600;}
 
 /*quick-menu*/
-
 .quick {position:fixed; flex-direction: column; justify-content: center; right: 20px; bottom: 20px; z-index: 1;}
 .quick a {display: flex; flex-direction: column; width: 80px; height: 80px; justify-content: center; align-items: center; border: 2px solid black; 
     border-radius: 50px/50px; font-weight: bold; margin-top: 10px; color: black; background-color: #fff;}
@@ -43,13 +63,12 @@
 .slider__wrap .control a {position: absolute; transform: translateY(-50%); top: 50%; display: block; width: 50px; height: 50px; transition: all 0.2s;}
 .slider__wrap .control .btn__prev a.prev {left: 10px;}
 .slider__wrap .control .btn__next a.next {right: 10px;}
-.slider__wrap .slider__dot {position: absolute; left: 50%; transform: translateX(-50%); bottom: 20px;}
-.slider__wrap .slider__dot .dot {width: 20px; height: 20px; background: rgba(0, 0, 0, 0.4); display: inline-block; border-radius: 50%; 
-    text-indent: -9999px; transition: all 0.3s; margin: 3px;}
-.slider__wrap .slider__dot .dot .active {background: rgba(255,255,255,0.9);}
-
-/*section container*/
-.main .wrap__title {}
+.slider__wrap .dot__wrap {display: inline-block; position: absolute; left: 50%; bottom:20%;}
+.slider__wrap .dot__wrap .start a{position: absolute; text-indent: -9999px; width: 20px;}
+.slider__wrap .dot__wrap .start .paly {background: url('../img/icon_play.png') no-repeat center;}
+.slider__wrap .dot__wrap .start .pause {background: url('../img/icon_pause.png') no-repeat center;}
+.slider__wrap .dot__wrap .slider__dot {position: absolute;}
+.slider__wrap .dot__wrap .slider__dot .dot {width: 20px; height: 20px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.2);}
 
 /*section2 style*/
 .section2 .cont {display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin: 0 190px; padding: 150px 0; }
@@ -64,4 +83,39 @@
 @keyframes fadeInLeft {0% {opacity: 0; transform: translate3d(-100%,0,0);} to {opacity: 1; transform: translateZ(0);}}
 
 /*section3 slider*/
-
+.section3 {background-color: #f7f7f7;}
+.section3 .cont {max-width: 1280px; margin: 0 auto; padding: 150px 0;}
+/*wine__title*/
+.wine_inner {display: flex; justify-content: flex-start; align-items: stretch; height: 400px; background-color: #fff;}
+.wine_inner .main_wrap {background: url('../img/titleWrap_01.png') no-repeat center / cover; width: 30%; padding: 30px;}
+.wine_inner .main_wrap h2 {font-size: 48px; font-weight: 700;}
+.wine_inner .main_wrap .more {display: flex; margin-top: 20px; font-size: 18px;}
+.wine_inner .main_wrap .more img {margin-left: 15px;}
+/*wine__tab*/
+.tab {position: relative; width: 70%;}
+.tab .tab_wrap {display: flex;}
+.tab .tab_wrap .tab_slide {display: flex; justify-content: flex-start; align-items: center; position: relative; overflow: hidden; height: 60px; padding-right: 100px; background-color: #ececec;}
+.tab .tab_wrap .slide1 {display: flex; justify-content: center; align-items: center; white-space: nowrap; margin: 0 20px; width: 100%; height: 60px; font-size: 18px; font-weight: 400;}
+.tab .tab_wrap .slide1:hover {color: #502e82; font-weight: 800;}
+.tab .tab_arrow {position: absolute; right: 0; top: 0; overflow: hidden; height:60px; background: #e0e0e0;}
+.tab .tab_arrow a {display: block; width: 50px; height: 60px; float: left; opacity: 0.2; transition: all 0.3s; text-indent: -9999px;}
+.tab .tab_arrow a:hover, .tab .tab_arrow a:focus {opacity: 1;}
+.tab .tab_arrow .prev {background: url('../img/TabWrap_prev.png') no-repeat center; left:40px;}
+.tab .tab_arrow .next {background: url('../img/TabWrap_next.png') no-repeat center; right:40px;}
+/*wine__slide_wrap*/
+.slide_wrap {display: flex; justify-content: center; position: relative; padding: 20px 0;}
+.slide_wrap .product_img img {width: 198px; height: 290px;}
+.slide_wrap .text_wrap {display: flex; flex-direction: column; justify-content: center; margin-left: 20px; }
+.slide_wrap .text_wrap .tag {display: flex; align-items: center; width: 400px; height: 30px; margin-bottom: 30px;}
+.slide_wrap .text_wrap .tag .country {background: url('../img/미국국기.png') no-repeat center; width: 46px; height:100%; text-indent: -9999px; margin-left:5px; border: 1px solid #808080}
+.slide_wrap .text_wrap .tag .type {display: flex; padding: 0 6px; margin-left:5px; height:100%; align-items: center; color: #81761F; border: 1px solid #81761F;}
+.slide_wrap .text_wrap .kr_name {font-size: 30px;}
+.slide_wrap .text_wrap .eng_name {font-size: 20px; margin: 10px 0; color: #808080;}
+.slide_wrap .text_wrap .explanation {color: #808080;}
+.slide_wrap .text_wrap .more {display: flex; align-items: center; justify-content: center; margin-top: 20px; font-weight: 500; width: 150px; height: 50px; color: #502e82; border: 1px solid #502e82; border-radius: 30px;}
+.slide_wrap .text_wrap .more .btn {display: inline-block; background: url('../img/btnColor1_arrow.png') no-repeat center; width: 6px; height: 9px; margin-left: 10px;}
+.slide_wrap .slide_arrow {display: block; position: absolute; width: 100%; height: 100%; text-indent: -9999px;}
+.slide_wrap .slide_arrow a {position: absolute; top: 40%; width: 25px; height: 47px; opacity: 0.2; transition: all 0.3s;}
+.slide_wrap .slide_arrow a:hover , .slide_wrap .slide_arrow a:focus {opacity: 1;}
+.slide_wrap .slide_arrow .prev {background: url('../img/productWrap_prev.png') no-repeat center / contain; left: 40px;}
+.slide_wrap .slide_arrow .next {background: url('../img/productWrap_next.png') no-repeat center / contain; right: 40px;}
