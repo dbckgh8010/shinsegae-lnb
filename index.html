@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="res/css/style.css">
-    <link rel="stylesheet" type="text/css" href="res/css/reset.css">
+    <link rel="stylesheet" href="res/css/reset.css">
+    <link rel="stylesheet" href="res/css/slick.css">
+    <link rel="stylesheet" href="res/css/slick-theme.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <title>신세계L&B</title>
 </head>
 <body>
-    <div id="wrap">
-        <div id="header">
+    <div class="wrap">
+        <header class="header">
             <div class="wrap__header">
-                <h1 class="logo"><a href="javascript:void(0)" class="logo-name">로고이미지</a></h1>
+                <h1 class="logo"><a href="javascript:void(0)" class="logo__name">로고이미지</a></h1>
                 <nav class="menu">
                     <ul class="main__menu">
                         <li class="main__menu1">
@@ -103,34 +105,20 @@
                     </ul>
                 </nav>    
                 <div class="shortcuts">
-                    <a href="javascript:void(0)" id="searchWrap" class="search">검색</a>
+                    <a href="javascript:void(0)" class="search">검색</a>
                     <a href="javascript:void(0)" class="lang" alt="언어">ENG</a>
-                    <a href="javascript:void(0)" id="orderWrap" class="order">Online Mall<i></i></a>
-                    <a href="javascript:void(0)" id="menuWrap" class="menu">menu</a>
+                    <a href="javascript:void(0)" class="order">Online Mall<i></i></a>
+                    <a href="javascript:void(0)" class="menu">menu</a>
                 </div>
             </div>
-        </div>
-        <div class="quick">
-            <a href="javasript:void(0)" class="brand">
-                <img src="res/img/ico_quick_brand.png" alt="brand">
-                <span>Brand</span>
-            </a>
-            <a href="javascript:void(0)" class="store">
-                <img src="res/img/ico_quick_store.png" alt="store">
-                <span>Store</span>
-            </a>
-            <a href="#header" class="top">
-                <img src="res/img/ico_quick_top.png" title="위로 가기">
-                <span>Top</span>
-            </a>
-        </div>
-        <div id="container" class="main">
-            <section id="section1" class="slider__wrap">
+        </header>
+        <main class="main">
+            <section class="section1">
                 <div class="slider__inner">
                     <div class="slider__img">
-                        <div id="slider item4" class="img">
+                        <div class="img">
                             <img src="https://www.shinsegae-lnb.com/upload/banner/202303152225255MESJT.png" alt="Sustainability Initiative">
-                            <div id="text1" class="slider__text">
+                            <div class="slider__text">
                                 <p class="title">Sustainability Initiative</p>
                                 <p class="subtitle">
                                     건강한 주류 문화를 이끌며
@@ -146,9 +134,9 @@
                                 </span>
                             </div>
                         </div>
-                        <div id="slider item3" class="img">
+                        <div class="img">
                             <img src="https://www.shinsegae-lnb.com/upload/banner/20230315222515PXZVHW.png" alt="A story in every bottle">
-                            <div id="text2" class="slider__text">
+                            <div class="slider__text">
                                 <p class="title">A story in every bottle</p>
                                 <p class="subtitle">
                                     한 병의 술에 이야기를 담아,
@@ -164,9 +152,9 @@
                                 </span>
                             </div>
                         </div>
-                        <div id="slider item2" class="img">
+                        <div class="img">
                             <img src="https://www.shinsegae-lnb.com/upload/banner/20230315222505P3VV6G.png" alt="Reader and Leader">
-                            <div id="text3" class="slider__text">
+                            <div class="slider__text">
                                 <p class="title">Reader and Leader</p>
                                 <p class="subtitle">
                                     시장 트렌드를 빠르게 읽고 분석하며
@@ -182,9 +170,9 @@
                                 </span>
                             </div>
                         </div>
-                        <div id="slider item1" class="img">
+                        <div class="img">
                             <img src="https://www.shinsegae-lnb.com/upload/banner/202303152224573G78B6.png" alt="Drink, play, Love">
-                            <div id="text4" class="slider__text">
+                            <div class="slider__text">
                                 <p class="title">Drink, Play, Love</p>
                                 <p class="subtitle">
                                     와인앤모어는 다채로운 상품과 믿음직한 가격을 선보이며,
@@ -223,7 +211,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section2" class="section2">
+            <section class="section2">
                 <div class="cont">
                     <div class="wrap__title">
                         <h2 class="title">
@@ -282,7 +270,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section3" class="section3">
+            <section class="section3">
                 <div class="cont">
                     <div class="wine_inner">
                         <div class="main_wrap">
@@ -325,12 +313,28 @@
                     </div>
                 </div>
             </section>
-            <div id="section4">
-            </div>
-            <div id="footer">
-            </div>
+        </main>
+        <footer class="footer">
+        </footer>
+        <div class="quick">
+            <a href="javasript:void(0)" class="brand">
+                <img src="res/img/ico_quick_brand.png" alt="brand">
+                <span>Brand</span>
+            </a>
+            <a href="javascript:void(0)" class="store">
+                <img src="res/img/ico_quick_store.png" alt="store">
+                <span>Store</span>
+            </a>
+            <a href="javascript:void(0);" class="top">
+                <img src="res/img/ico_quick_top.png" title="위로 가기">
+                <span>Top</span>
+            </a>
         </div>
     </header>
-    <script src="res/js/project.js"></script>
+    <script src="res/js/header.js"></script>
+    <script src="res/js/main.js"></script>
+    <script src="res/js/jquery-3.7.1.min.js"></script>
+    <script src="res/js/slick.min.js"></script>
+    <script src="res/js/slick.js"></script>
 </body>
 </html>
