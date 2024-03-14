@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 });
 
-const $topBtn = document.querySelector(".top");
+const topBtn = document.querySelector(".top");
 
 /*버튼 클릭 시 제일 상단으로 이동*/
-$topBtn.onclick = () => {
+topBtn.onclick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });  
 }
