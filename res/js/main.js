@@ -22,4 +22,13 @@ $(document).ready(function() {
         $(this).css({display:'none'});
         $('.section1 .pause') .css({display:'block'});
     });
+
+    $('.wine_inner .tab_slide').slick({      
+        infinite: true,             
+        slidesToShow: 1,
+        variableWidth: true,
+        focusOnSelect: true,                     
+        prevArrow: $('.wine_inner .tab_wrap .prev'), 
+        nextArrow: $('.wine_inner .tab_wrap .next')
+    });
 });
