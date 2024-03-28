@@ -23,12 +23,27 @@ $(document).ready(function() {
         $('.section1 .pause') .css({display:'block'});
     });
 
-    $('.wine_inner .tab_slide').slick({      
-        infinite: true,             
+    $('.tab__list').slick({
+        infinite: true,
         slidesToShow: 1,
         variableWidth: true,
-        focusOnSelect: true,                     
-        prevArrow: $('.wine_inner .tab_wrap .prev'), 
-        nextArrow: $('.wine_inner .tab_wrap .next')
+        focusOnSelect: true,
+        prevArrow: $('.wine__inner .tab__arrow .prev'), 
+        nextArrow: $('.wine__inner .tab__arrow .next')
+    });
+
+    $('.product').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('.wine__wrap .product__arrow .prev'),
+        nextArrow: $('.wine__wrap .product__arrow .next')
+    });
+
+    $('promotion__list').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $('promotion__wrap .promotion__arrow .prev'),
+        nextArrow: $('promotion__wrap .promotion__arrow .next')
     });
 });

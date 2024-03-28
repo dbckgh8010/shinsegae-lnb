@@ -112,7 +112,7 @@
                 </div>
             </div>
         </header>
-        <main class="main">
+        < class="main">
             <section class="section1">
                 <div class="slide__inner">
                     <div class="slide__img" style="background-image: url('res/img/slide1.png');">
@@ -246,42 +246,407 @@
             </section>
             <section class="section3">
                 <div class="cont">
-                    <div class="wine_inner">
-                        <div class="main_wrap">
-                            <h2 class="main_title">Wine</h2>
-                            <a href="javascript:void(0)" class="more">
-                                전체 와이너리
-                                <img src="res/img/icon_plus.png" alt="전체 와이너리 더보기">
-                            </a>
-                        </div>
-                        <div class="tab">
-                            <div class="tab_wrap">
-                                <div class="tab_slide">
-                                    <div class="slide1">쉐이퍼 반야드</div><div class="slide1">로버트 몬다비</div><div class="slide1">투핸즈</div><div class="slide1">까테나 자파타</div><div class="slide1">코노수르</div><div class="slide1">이 기갈</div><div class="slide1">지세븐</div><div class="slide1">페데리코 파테니나</div><div class="slide1">JP슈네</div><div class="slide1">그롱네</div><div class="slide1">그루버 뢰시치</div>
-                                </div>    
-                                <div class="tab_arrow">
-                                    <a href="javascript:void(0)" class="prev">이전 슬라이드</a>
-                                    <a href="javascript:void(0)" class="next">다음 슬라이드</a>
+                    <div class="alcohol_wrap">
+                        <ul class="alcohol_list">
+                            <li class="list">Wine</li>
+                            <li class="list">Whisky&Spirit</li>
+                            <li class="list">Bear&Other</li>
+                        </ul>
+                        <div class="wine__inner">
+                            <div class="wine__title">
+                                <h2 class="title">Wine</h2>
+                                <a href="javascript:void(0)" class="subtitle">전체 와이너리<i></i></a>
+                            </div>
+                            <div class="wine_product">
+                                <div class="tab">
+                                    <div class="tab__list">
+                                        <div class="list__name active" data-tab="product1">쉐이퍼 빈야드</div><div class="list__name" data-tab="product2">로버트 몬다비</div><div class="list__name" data-tab="product3">투핸즈</div><div class="list__name" data-tab="product4">까테나 자파타</div><div class="list__name" data-tab="product5">코노수르</div><div class="list__name" data-tab="product6">이 기갈</div><div class="list__name" data-tab="product7">지세븐</div><div class="list__name" data-tab="product8">페데리코 파테니나</div><div class="list__name" data-tab="product9">JP슈네</div><div class="list__name" data-tab="product10">그롱네</div>
+                                    </div>
+                                    <div class="tab__arrow">
+                                        <a href="javascript:void(0)" class="prev">이전</a>
+                                        <a href="javascript:void(0)" class="next">다음</a>
+                                    </div>
+                                </div>
+                                <div class="wine__wrap">
+                                    <div id="product1" class="product active">
+                                        <div class="wine__list">
+                                            <div class="wine__img">레드 숄더 랜치 샤르도네</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="white__tag">화이트 와인</span>
+                                                </div>
+                                                <p class="name">레드 숄더 랜치 샤르도네</p>
+                                                <p class="eng__name">Red Shoulder Ranch Chardonnay</p>
+                                                <p class="des">풍성하고 우아한 아로마가 뛰어난 나 파밸리 화이트 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="wine__list">
+                                            <div class="wine__img1">TD-9</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="red__tag">레드 와인</span>
+                                                </div>
+                                                <p class="name">TD-9</p>
+                                                <p class="eng__name">TD-9</p>
+                                                <p class="des">생동감 있는 과실향이 매력적인 나파밸리 레드 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="product2" class="product">
+                                        <div class="wine__list">
+                                            <div class="wine__img">우드브릿지 소비뇽 블랑</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="white__tag">화이트 와인</span>
+                                                </div>
+                                                <p class="name">우드브릿지 소비뇽 블랑</p>
+                                                <p class="eng__name">Woodbridge Sauvignon Blanc</p>
+                                                <p class="des">상큼한 과실향이 돋보이는 로다이 소비뇽 블랑</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="wine__list">
+                                            <div class="wine__img1">우드브릿지 피노 그리지아</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="red__tag">레드 와인</span>
+                                                </div>
+                                                <p class="name">우드브릿지 피노 그리지아</p>
+                                                <p class="eng__name">Woodbridge Pinot Grigio</p>
+                                                <p class="des">음식과 페어링하기 좋은 화이트 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="product3" class="product">
+                                        <div class="wine__list">
+                                            <div class="wine__img">투핸즈 아프로디테 까베르네 소비뇽</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="white__tag">화이트 와인</span>
+                                                </div>
+                                                <p class="name">투핸즈 아프로디테 까베르네 소비뇽</p>
+                                                <p class="eng__name">Two Hands Aphrodite Barossa Valley Chabernet Sauvigon</p>
+                                                <p class="des">와이너리의 플래그쉽 와인으로 '미의 여신'을 뜻하는 네이밍</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="wine__list">
+                                            <div class="wine__img1">투핸즈 싱글 빈야드 '시크릿 블락' 쉬라즈</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="red__tag">레드 와인</span>
+                                                </div>
+                                                <p class="name">투핸즈 싱글 빈야드 '시크릿 블락' 쉬라즈</p>
+                                                <p class="eng__name">Two Hands 'secret Block' Single vineyard Barossa Valley Shiraz</p>
+                                                <p class="des">각 포도밭의 특성을 그대화해 만든 싱글 빈야드 시리즈</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="product4" class="product">
+                                        <div class="wine__list">
+                                            <div class="wine__img">안젤리카 자파타 말벡</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="white__tag">화이트 와인</span>
+                                                </div>
+                                                <p class="name">안젤리카 자파타 말벡</p>
+                                                <p class="eng__name">Angelica Zapata Malbec</p>
+                                                <p class="des">아르헨티나 대표 품종 말벡으로 만든 레드 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="wine__list">
+                                            <div class="wine__img1">안젤리카 자파타 까르베네 소비뇽</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="red__tag">레드 와인</span>
+                                                </div>
+                                                <p class="name">안젤리카 자파타 까르베네 소비뇽</p>
+                                                <p class="eng__name">Angelica Zapata Cabernet Sauvignon</p>
+                                                <p class="des">복합적인 까르베네 소비뇽으로 만든 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="product5" class="product">
+                                        <div class="wine__list">
+                                            <div class="wine__img">코노수르 싱글 빈야드 시라</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="white__tag">화이트 와인</span>
+                                                </div>
+                                                <p class="name">코노수르 싱글 빈야드 시라</p>
+                                                <p class="eng__name">Cono Sur Single Vineyard Syrah</p>
+                                                <p class="des">가장 좋은 구획의 단일 품종을 이용하여 만든 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="wine__list">
+                                            <div class="wine__img1">코노수르 싱글 빈야드 샤르도네</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="red__tag">레드 와인</span>
+                                                </div>
+                                                <p class="name">코노수르 싱글 빈야드 샤르도네</p>
+                                                <p class="eng__name">Cono Sur Single Vineyard Chardonnay</p>
+                                                <p class="des">가장 좋은 구획의 단일 품종만을 이용하여 만든 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="product6" class="product">
+                                        <div class="wine__list">
+                                            <div class="wine__img">레드 숄더 랜치 샤르도네2</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="white__tag">화이트 와인</span>
+                                                </div>
+                                                <p class="name">레드 숄더 랜치 샤르도네2</p>
+                                                <p class="eng__name">Red Shoulder Ranch Chardonnay2</p>
+                                                <p class="des">풍성하고 우아한 아로마가 뛰어난 나 파밸리 화이트 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="wine__list">
+                                            <div class="wine__img1">TD-10</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="red__tag">레드 와인</span>
+                                                </div>
+                                                <p class="name">TD-10</p>
+                                                <p class="eng__name">TD-10</p>
+                                                <p class="des">생동감 있는 과실향이 매력적인 나파밸리 레드 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="product7" class="product">
+                                        <div class="wine__list">
+                                            <div class="wine__img">우드브릿지 소비뇽 블랑2</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="white__tag">화이트 와인</span>
+                                                </div>
+                                                <p class="name">우드브릿지 소비뇽 블랑2</p>
+                                                <p class="eng__name">Woodbridge Sauvignon Blanc2</p>
+                                                <p class="des">상큼한 과실향이 돋보이는 로다이 소비뇽 블랑</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="wine__list">
+                                            <div class="wine__img1">우드브릿지 피노 그리지아2</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="red__tag">레드 와인</span>
+                                                </div>
+                                                <p class="name">우드브릿지 피노 그리지아2</p>
+                                                <p class="eng__name">Woodbridge Pinot Grigio2</p>
+                                                <p class="des">음식과 페어링하기 좋은 화이트 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="product8" class="product">
+                                        <div class="wine__list">
+                                            <div class="wine__img">투핸즈 아프로디테 까베르네 소비뇽2</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="white__tag">화이트 와인</span>
+                                                </div>
+                                                <p class="name">투핸즈 아프로디테 까베르네 소비뇽2</p>
+                                                <p class="eng__name">Two Hands Aphrodite Barossa Valley Chabernet Sauvigon2</p>
+                                                <p class="des">와이너리의 플래그쉽 와인으로 '미의 여신'을 뜻하는 네이밍</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="wine__list">
+                                            <div class="wine__img1">투핸즈 싱글 빈야드 '시크릿 블락' 쉬라즈2</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="red__tag">레드 와인</span>
+                                                </div>
+                                                <p class="name">투핸즈 싱글 빈야드 '시크릿 블락' 쉬라즈2</p>
+                                                <p class="eng__name">Two Hands 'secret Block' Single vineyard Barossa Valley Shiraz2</p>
+                                                <p class="des">각 포도밭의 특성을 그대화해 만든 싱글 빈야드 시리즈</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="product9" class="product">
+                                        <div class="wine__list">
+                                            <div class="wine__img">안젤리카 자파타 말벡2</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="white__tag">화이트 와인</span>
+                                                </div>
+                                                <p class="name">안젤리카 자파타 말벡2</p>
+                                                <p class="eng__name">Angelica Zapata Malbec2</p>
+                                                <p class="des">아르헨티나 대표 품종 말벡으로 만든 레드 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="wine__list">
+                                            <div class="wine__img1">안젤리카 자파타 까르베네 소비뇽2</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="red__tag">레드 와인</span>
+                                                </div>
+                                                <p class="name">안젤리카 자파타 까르베네 소비뇽2</p>
+                                                <p class="eng__name">Angelica Zapata Cabernet Sauvignon2</p>
+                                                <p class="des">복합적인 까르베네 소비뇽으로 만든 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="product10" class="product">
+                                        <div class="wine__list">
+                                            <div class="wine__img">코노수르 싱글 빈야드 시라2</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="white__tag">화이트 와인</span>
+                                                </div>
+                                                <p class="name">코노수르 싱글 빈야드 시라2</p>
+                                                <p class="eng__name">Cono Sur Single Vineyard Syrah2</p>
+                                                <p class="des">가장 좋은 구획의 단일 품종을 이용하여 만든 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="wine__list">
+                                            <div class="wine__img1">코노수르 싱글 빈야드 샤르도네2</div>
+                                            <div class="wine__text">
+                                                <div class="product__tag">
+                                                    <h2 class="country">미국</h2>
+                                                    <span class="red__tag">레드 와인</span>
+                                                </div>
+                                                <p class="name">코노수르 싱글 빈야드 샤르도네2</p>
+                                                <p class="eng__name">Cono Sur Single Vineyard Chardonnay2</p>
+                                                <p class="des">가장 좋은 구획의 단일 품종만을 이용하여 만든 와인</p>
+                                                <a href="javascript:void(0)" class="btn">자세히 보기<i></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product__arrow">
+                                        <a href="javascript:void(0)" class="prev">이전</a>
+                                        <a href="javascript:void(0)" class="next">다음</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="slide_wrap">
-                                <div class="product_img">
-                                    <img src="res/img/쉐이퍼-레드-숄더-랜치-샤도네이-2021.jpg" alt="쉐이퍼 레드 숄더 랜치 샤도네이">
+                        </div>                        
+                    </div>
+                </div>
+            </section>
+            <section class="section4">
+                <div class="cont">
+                    <div class="title_wrap">
+                        <h2 class="title">CSR</h2>
+                        <a href="javascript:void(0)" class="link">더보기<i><img src="res/img/icon_plus.png"></i></a>
+                    </div>
+                    <div class="slide">
+                        <div class="slide1">
+                            <a href="javascript:void(0)">
+                                <img src="res/img/csr1.jpg">
+                                <p class="slide__text">2023년 하반기 걸음 기부 캠페인: &lt;Walk and More&gt;</p>
+                                <span class="slide__tag">임직원 봉사활동</span>
+                                <span class="day">2023.11.16</span>
+                            </a>
+                            </div>
+                        <div class="slide1">
+                            <a href="javascript:void(0)">
+                                <img src="res/img/csr2.jpg">
+                                <p class="slide__text">와인과 예술 그리고 미식의 만남, &lt;감각의 테이블&gt;</p>
+                                <span class="slide__tag">문화지원/상생</span>
+                                <span class="day">2023.11.15</span>
+                            </a>
+                            </div>
+                        <div class="slide1">
+                            <a href="javascript:void(0)">
+                                <img src="res/img/csr3.jpg">
+                                <p class="slide__text">서울문화재단 제휴전시회 「다이닝 앤 모어(Dining and More)_감각의 테이블」</p>
+                                <span class="slide__tag">문화지원/상생</span>
+                                <span class="day">2023.11.14</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section5">
+                <div class="cont">
+                    <div class="title_wrap">
+                        <h2 class="title">Promotion</h2>
+                        <a href="javascript:void(0)" class="link">더보기<i><img src="res/img/icon_plus.png"></i></a>
+                    </div>
+                    <div class="promotion__wrap">
+                        <div class="promotion__list">
+                            <div class="promotion">
+                                <a href="javascript:void(0)">
+                                    <img src="res/img/20230525152851ZP2TRZ.jpg">
+                                </a>
                                 </div>
-                                <div class="text_wrap">
-                                    <div class="tag">
-                                        <span class="country">미국</span>
-                                        <span class="type">화이트 와인</span>
-                                    </div>
-                                    <p class="kr_name">레드 숄더 랜치 샤르도네</p>
-                                    <p class="eng_name">Red Shoulder Ranch Chardonnay</p>
-                                    <p class="explanation">풍성하고 우아한 아로마가 뛰어난 나파밸리 화이트 와인</p>
-                                    <a href="javascript:void(0)" class="more"><span>자세히 보기<i class="btn"></i></span></a>
+                            <div class="promotion">
+                                <a href="javascript:void(0)">
+                                    <img src="res/img/20230530161341LGNDMR.jpg">
+                                </a>
                                 </div>
-                                <div class="slide_arrow">
-                                    <a href="javascript:void(0)"class="prev">이전 슬라이드</a>
-                                    <a href="javascript:void(0)" class="next">다음 슬라이드</a>
-                                </div>
+                            <div class="promotion">
+                                <a href="javascript:void(0)">
+                                    <img src="res/img/20230531160848SVQC5W.jpg">
+                                </a>
+                            </div>
+                            <div class="promotion">
+                                <a href="javascript:void(0)">
+                                    <img src="res/img/20230531160910BFGNA5.jpg">
+                                </a>
+                            </div>
+                            <div class="promotion">
+                                <a href="javascript:void(0)">
+                                    <img src="res/img/20230531160924QALKXQ.jpg">
+                                </a>
+                            </div>
+                            <div class="promotion">
+                                <a href="javascript:void(0)">
+                                    <img src="res/img/20230615165153XZ6SG3.jpg">
+                                </a>
+                            </div>
+                            <div class="promotion">
+                                <a href="javascript:void(0)">
+                                    <img src="res/img/20230630102337DSND7N.jpg">
+                                </a>
+                            </div>
+                            <div class="promotion">
+                                <a href="javascript:void(0)">
+                                    <img src="res/img/202305311608593F4FQM.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="space__bar">
+                            </div>
+                            <div class="promotion__arrow">
+                                <button class="prev">이전</button>
+                                <button class="next">다음</button>
                             </div>
                         </div>
                     </div>
@@ -307,7 +672,7 @@
                         </p>
                         <p>© 2023Shinsegae L&B Ltd. All Rights Reserved.</p>
                     </div>
-                    <div class="surport_img">
+                    <div class="support_img">
                         <img src="res/img/foot_img1.png" alt="가족친화 우수기업">
                         <img src="res/img/foot_img2.png" alt="문화예술후원우수기관">
                         <a href="https://www.wa.or.kr/board/list.asp?BoardID=0006">
