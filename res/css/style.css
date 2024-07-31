@@ -1,0 +1,184 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+/* header*/
+.header {position: fixed; left: 0;  top:0; right: 0; z-index: 100;}
+.header .wrap__header {display: flex; justify-content: center; align-items: center; transition:all 0.3s ease-out;}
+
+/*header 로고*/
+.header .wrap__header h1 {position: absolute; left: 40px; top: 36px;}
+.header .wrap__header h1 a {display: block; text-indent: -9999px; width: 215px; height: 28px; 
+    background: url(' ../img/logo_wh.png') no-repeat center / contain;}
+
+/*header menu부분*/
+.header .menu {display: flex; position: relative;}
+.header .menu .main__menu {display: flex; justify-content: center; align-items: stretch; text-align: center;}
+.header .menu .main__menu .main__menu1 {display: block; position: relative; width: 160px; line-height: 100px; font-size: 19px; color: black;}
+.header .menu .main__menu .main__menu1 .title__link {top: 36px; color: #fff; width: 160px; line-height: 100px;}
+.header .menu .main__menu > .main__menu1 .title__link::after {display: block; position: absolute; width: 60px; left:32%; content: ''; border-bottom: solid 3px #502e82; transform: scaleX(0); transition: transform 0.3s ease-in-out;}
+.header .menu .main__menu > .main__menu1:hover .title__link::after {transform: scaleX(1);}
+.header .menu .main__menu > .main__menu1 .title__link:focus::after {transform-origin: 0 50%;}
+
+/*header submenu부분*/
+.header .submenu {display: none; padding: 20px 10px 60px; color: #898989; font-size: 15px;}
+.header .submenu .submenu1 {padding: 10px 0; text-align: center;}
+.header .submenu .submenu1 a:hover {color:#502e82; font-weight: 1000;}
+.header .submenu .submenu1 a:focus {color: #502e82;}
+
+/*header shortcut부분*/
+.header .shortcuts {display: flex; justify-content: flex-end; align-items: center; position: absolute; top: 36px; right: 40px;}
+.header .shortcuts .search {display: block; width: 22px; height: 22px; text-indent: -9999px; color: #fff;
+    background: url('../img/ico_searchOpen.png') no-repeat center / contain;}
+.header .shortcuts .lang {display: block; margin-left: 30px; padding-left: 32px; line-height: 32px; color: #fff;
+    background: url('../img/ico_langOpen.png') no-repeat left center;}
+.header .shortcuts .order {display: flex; justify-content: center; align-items: center; border: 1px solid #fff; border-radius: 20px; height: 35px; font-size: 14px; margin-left: 30px; padding: 0 20px; color: #fff;}
+.header .shortcuts .order i {width: 11px; height: 11px; margin-left: 10px; background: url('../img/ico_order.png') no-repeat center;}
+.header .shortcuts .menu {display: none;}
+
+/*hover로 submenu 열리도록 연결*/
+.header .menu:hover .submenu {display: block;}
+
+/*header부분 js로 변경하기*/
+.header.open .wrap__header {background-color: #fff;}
+.header.open .wrap__header h1 a {background: url(' ../img/logo.png') no-repeat center / contain;}
+.header.open .shortcuts .search {background: url('../img/ico_searchOpen_bk.png') no-repeat center / contain;}
+.header.open .shortcuts .lang {color: #000; background: url('../img/ico_langOpen_bk.png') no-repeat left center;}
+.header.open .shortcuts .order {border: 1px solid #000; color: #000;}
+.header.open .shortcuts .order i {background: url('../img/ico_order_bk.png');}
+.header.open .menu .main__menu .main__menu1 .title__link {color: #000;}
+.header.scroll .wrap__header {background-color: #fff; box-shadow: rgba(0, 0, 0, 0.1) 0 5px 10px;}
+.header.scroll .wrap__header h1 a {background: url(' ../img/logo.png') no-repeat center / contain;}
+.header.scroll .shortcuts .search {background: url('../img/ico_searchOpen_bk.png') no-repeat center / contain;}
+.header.scroll .shortcuts .lang {color: #000; background: url('../img/ico_langOpen_bk.png') no-repeat left center;}
+.header.scroll .shortcuts .order {border: 1px solid #000; color: #000;}
+.header.scroll .shortcuts .order i {background: url('../img/ico_order_bk.png');}
+.header.scroll .menu .main__menu .main__menu1 .title__link {color: #000;}
+
+
+/*section1*/
+.section1 {position: relative;}
+
+/*section1 slide*/
+.section1 .slide__inner .slide__img {display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; height: 100vh; color: #fff; font-weight: 500; text-shadow: rgba(0, 0, 0, 1)1px 0 10px;
+    background: no-repeat center / cover;}
+
+/*section1 slide background로 이미지 불러오기*/
+.section1 .slide__inner .slide__img:nth-child(1) {background-image: url('../img/slide1.png');}
+.section1 .slide__inner .slide__img:nth-child(2) {background-image: url('../img/slide2.png');}
+.section1 .slide__inner .slide__img:nth-child(3) {background-image: url('../img/slide3.png');}
+.section1 .slide__inner .slide__img:nth-child(4) {background-image: url('../img/slide4.png');}
+
+/*section1 slide에 적혀있는 텍스트 꾸미기*/
+.section1 .slide__inner .slide__img .title {font-size: 30px;}
+.section1 .slide__inner .slide__img .subtitle {font-size: 45px; margin: 30px 0; line-height: 1.3;}
+.section1 .slide__inner .slide__img .last {font-size: 20px;}
+.section1 .control {display: flex; justify-content: center; align-items: center;}
+.section1 .control a {position: absolute; transform: translateY(-50%); top: 50%; display: block; width: 50px; height: 50px; transition: all 0.2s; opacity:0.5;}
+.section1 .control a.prev {left: 10px;}
+.section1 .control a.next {right: 10px;}
+.section1 .control a:hover, .section1 .control a:focus {opacity: 1;}
+.section1 .dot__wrap {display: flex; justify-content: center; align-items: center; width: auto; position: absolute; left: 50%; bottom: 30%; transform: translate(-50%, 0); text-indent: -9999px;}
+.section1 .dot__wrap .play {display:none; width: 8px; height: 15px; margin-right: 10px; background: url('../img/icon_play.png') no-repeat center;}
+.section1 .dot__wrap .pause {width: 8px; height: 15px; margin-right: 10px; background: url('../img/icon_pause.png') no-repeat center;}
+.section1 .slick-dots {display: flex; justify-content: center; align-items: center; width: auto; position:static;}
+.section1 .slick-dots li {display: inline-block; margin: 0; width: auto; height: auto;}
+.section1 .slick-dots li button {margin: 0 10px; width:10px; height:10px; background-color: #fff; border-radius: 5px; transition: width 0.3s; border: none;}
+.section1 .slick-dots li.slick-active button {width: 40px;} 
+.section1 .slick-dots li:before {display: none;}
+
+/*section2 style*/
+.section2 .cont {display: flex; justify-content: flex-start; align-items: flex-start; position: relative; margin: 0 190px; padding: 150px 0; }
+.section2 .cont .wrap__title {width: 30%; animation: fadeInLeft 1s;}
+.section2 .cont .wrap__title h2 {font-size: 48px;}
+.section2 .cont .wrap__title p {margin-top: 30px; font-size: 18px;}
+.section2 .cont .wrap2 {display: grid; width: 70%;  grid-template-columns: repeat(2, 1fr);}
+.section2 .cont .wrap2 .vision2 {max-width: 400px; margin-top: 80px;}
+.section2 .cont .wrap2 p {margin: 30px 0; font-size: 36px; font-weight: bold;}
+.section2 .cont .wrap2 span {font-size: 16px;}
+
+@keyframes fadeInLeft {0% {opacity: 0; transform: translate3d(-100%,0,0);} to {opacity: 1; transform: translateZ(0);}}
+
+/*section3*/
+.section3 {background: #f3f3f3;}
+.section3 .cont {max-width: 1280px; margin: 0 auto; padding: 150px 0;}
+.section3 .alcohol_wrap {display: flex; flex-direction: column;  justify-content: center; align-items: center;}
+.section3 .alcohol_wrap .mo__alcohol {display: none;}
+.section3 .alcohol_wrap .wine__inner {display: flex; max-width: 1280px;}
+.section3 .alcohol_wrap .wine__inner .wine__title {display: flex; flex-direction: column; width: 30%; height: auto; padding: 30px; background: url('../img/titleWrap_01.png') no-repeat left / cover;}
+.section3 .alcohol_wrap .wine__inner .wine__title .title {font-size: 48px;}
+.section3 .alcohol_wrap .wine__inner .wine__title .subtitle {display: flex; align-items: center; margin-top: 30px;}
+.section3 .alcohol_wrap .wine__inner .wine__title .subtitle i {display: block; width: 13px; height: 13px; margin-left: 15px; background: url('../img/icon_plus.png') no-repeat center / cover;}
+.section3 .alcohol_wrap .wine_product .product {display: none;}
+.section3 .alcohol_wrap .wine_product {display: flex; flex-direction: column; width: 70%;}
+.section3 .alcohol_wrap .wine_product .tab {display: flex; position: relative; height: 60px; padding: 0 100px 0 40px; background: #ececec;}
+.section3 .alcohol_wrap .wine_product .tab__list {display: flex; justify-content: flex-start; align-items: center; overflow: hidden;}
+.section3 .alcohol_wrap .wine_product .tab__list .list__name {display: flex; align-items: center; margin: 0 20px; height: 60px; text-wrap: nowrap; font-weight: 600; color: #808080;}
+.section3 .alcohol_wrap .wine_product .tab__arrow {display: flex; position: absolute; top: 0; right: 0; width: 100px; height: 60px; background: #e0e0e0;}
+.section3 .alcohol_wrap .wine_product .tab__arrow .prev {display: block; width: 50px; background: url('../img/TabWrap_prev.png') no-repeat center; text-indent: -9999px;}
+.section3 .alcohol_wrap .wine_product .tab__arrow .next {display: block; width: 50px; background: url('../img/TabWrap_next.png') no-repeat center; text-indent: -9999px;}
+.section3 .alcohol_wrap .wine_product .wine__wrap {position: relative; padding: 20px 0; background: #fff;}
+.section3 .alcohol_wrap .wine_product .tab .tab__list .slick-active {color:#502e82; font-weight: 900;}
+.section3 .alcohol_wrap .wine__wrap .product .wine__list {display: flex; justify-content: center; align-items: center;}
+.section3 .alcohol_wrap .wine__wrap .product .wine__list .wine__text {width: 400px; margin-left: 20px;}
+.section3 .alcohol_wrap .wine__wrap .product .wine__list .wine__text .product__tag {display: flex; align-items: center; margin-bottom: 10px;}
+.section3 .alcohol_wrap .wine__wrap .product .wine__list .wine__text .country {width: 46px; height: 30px; margin-right: 5px; background: url('../img/미국국기.png') no-repeat center /contain; text-indent: -9999px;}
+.section3 .alcohol_wrap .wine__wrap .product .wine__list .wine__text .white__tag {color: #81761F; border: 1px solid #81761F; height: 30px; line-height: 28px; padding: 0 6px; margin-right: 5px;}
+.section3 .alcohol_wrap .wine__wrap .product .wine__list .wine__text .name {font-size: 30px; font-weight: 500; line-height: 42px;}
+.section3 .alcohol_wrap .wine__wrap .product .wine__list .wine__text .eng__name {font-size: 20px; font-weight: 500; line-height: 28px; color: #808080; margin: 10px 0; letter-spacing: -1px;}
+.section3 .alcohol_wrap .wine__wrap .product .wine__list .wine__text .des {letter-spacing: -2px;}
+.section3 .alcohol_wrap .wine__wrap .product .wine__list .wine__text .btn {display: flex; justify-content: center; align-items: center; width: 150px; height: 50px; margin-top: 20px; border: 1px solid #502e82; border-radius: 25px; color: #502e82;}
+.section3 .alcohol_wrap .wine__wrap .product .wine__list .wine__text .btn i {width: 6px; height: 9px; margin-left: 10px; background: url('../img/btnColor1_arrow.png') no-repeat;}
+.section3 .alcohol_wrap .wine__wrap .product__arrow .prev {position: absolute; top: 50%; left: 30px; width: 25px; height: 47px; opacity: 0.2; text-indent: -9999px; transform: translate(0, -50%); background: url('../img/productWrap_prev.png') no-repeat center / contain;}
+.section3 .alcohol_wrap .wine__wrap .product__arrow .next {position: absolute; top: 50%; right: 30px; width: 25px; height: 47px; opacity: 0.2; text-indent: -9999px; transform: translate(0, -50%); background: url('../img/productWrap_next.png') no-repeat center / contain;}
+/*wine이미지*/
+.section3 .wine__wrap .product .wine__list .wine__img {width: 200px; height: 280px; background: url('../img/샤르도네.jpg') no-repeat center / contain; text-indent: -9999px;}
+.section3 .wine__wrap .product .wine__list .wine__img1 {width: 200px; height: 280px; background: url('../img/1000 스토리 골드 러쉬.jpg') no-repeat center / contain; text-indent: -9999px;}
+
+/*section4*/
+.section4 {display: flex; justify-content: center; padding: 150px 0; margin: 0 auto;}
+.section4 .title_wrap {display:flex; justify-content: space-between; align-items: center; margin-bottom: 80px;}
+.section4 .title_wrap .title {font-size: 48px;}
+.section4 .title_wrap .link {display: flex;}
+.section4 .title_wrap i {margin-left: 15px;}
+.section4 .slide {display: flex; justify-content: space-between; max-width: 1280px;}
+.section4 .slide .slide1  {max-width: 400px; width: 32%;}
+.section4 .slide img {max-width: 400px;}
+.section4 .slide .slide__text {margin: 30px 0;}
+
+/*section5*/
+.section5 {padding: 150px 0; background: #f7f7f7;}
+.section5 .title_wrap {display: flex; justify-content: space-between; align-items: center; max-width: 1280px; margin: 0 auto; margin-bottom: 80px;}
+.section5 .title_wrap .title {font-size: 48px; font-weight: 400; color: #333333;}
+.section5 .promotion__wrap {margin-left: calc(50% - 640px); overflow: hidden;}
+.section5 .promotion__wrap .promotion__list {max-width: 1280px;}
+.section5 .promotion__wrap .promotion__list .promotion {display: flex;}
+.section5 .promotion__wrap .promotion__list .promotion img {width: 100%;}
+.section5 .promotion__wrap .control {display: flex; justify-content: center; align-items: center; max-width: 1280px; margin-top: 80px;}
+.section5 .promotion__wrap .control .promotion__arrow {display: flex; margin-left: 30px;}
+.section5 .promotion__wrap .control .promotion__arrow .prev {width: 30px; height: 30px; opacity: 0.4; background: url('../img/TabWrap_prev.png')no-repeat center; text-indent: -9999px;}
+.section5 .promotion__wrap .control .promotion__arrow .next {width: 30px; height: 30px; opacity: 0.4; background: url('../img/TabWrap_next.png')no-repeat center; text-indent: -9999px;}
+.section5 .promotion__wrap .control .promotion__arrow .prev:hover {opacity: 1;}
+.section5 .promotion__wrap .control .promotion__arrow .next:hover {opacity: 1;}
+/*footer*/
+.footer {display: flex; align-items: center; padding: 80px 0; background-color: #333333;}
+.footer .cont {margin: 0 auto; min-width: 1280px;}
+.top, .bottom {display: flex; justify-content: space-between; align-items: center;}
+
+/*footer top부분*/
+.top li {margin-right: 40px;}
+.top li:last-child {margin:0;}
+.top ul {display: flex;}
+.top a {color: #fff; font-size: 18px;}
+
+/*footer bottom부분*/
+.bottom {margin-top: 80px;}
+.bottom .address {display:flex; flex-direction: column; color: rgba(255,255,255,0.5); font-size: 16px;}
+.bottom .address span {position: relative; margin-right: 15px; padding-right: 15px;}
+.bottom .support_img {display: flex; justify-content: flex-end;}
+.bottom .support_img img {display: flex; margin-right: 40px;}
+.bottom .support_img img:last-child {margin:0;}
+
+/*quick-menu*/
+.quick {position:fixed; flex-direction: column; justify-content: center; right: 20px; bottom: 20px; z-index: 1;}
+.quick a {display: flex; flex-direction: column; width: 80px; height: 80px; justify-content: center; align-items: center; border: 1px solid black; border-radius: 50px/50px; font-weight: bold; margin-top: 10px; color: black; background-color: #fff;}
+.quick img {width: 17px;}
+.quick span {margin-top: 10px;}
